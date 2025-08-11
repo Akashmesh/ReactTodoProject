@@ -1,14 +1,15 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 // import './App.css'
+import {Todo} from "./Todo/Todo.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-    <h1>hii</h1>
+    <Todo/>
     </>
   )
 }
 
-export default App
+export default App;
