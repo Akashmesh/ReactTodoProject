@@ -1,6 +1,135 @@
-.checkList{
-    text-decoration: line-through;
+/* ==== Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #1e1e1e;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* ==== Container ==== */
+.todo-container {
+  width: 100%;
+  max-width: 500px;
+  background: #252525;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ==== Header ==== */
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.date-time {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* ==== Form ==== */
+form {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 1rem;
+}
+.todo-input {
+  flex: 1;
+  height: 45px;
+  padding: 0 10px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: #333;
+  color: #fff;
+  border-radius: 6px 0 0 6px;
+}
+.todo-btn {
+  flex: 0 0 100px;
+  height: 45px;
+  border: none;
+  background: #4cafef;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+.todo-btn:hover {
+  background: #3b9bdd;
+}
+
+/* ==== Todo List ==== */
+.myUnOrdList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.todo-item {
+  display: grid;
+  grid-template-columns: 1fr 40px 40px;
+  gap: 0.5rem;
+  align-items: center;
+  background: #333;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+}
+.todo-item span {
+  word-break: break-word;
+}
+
+/* ==== Completed ==== */
+.checkList {
+  text-decoration: line-through;
+  color: #888;
 }
 .notCheckList {
-    text-decoration: none;
-} 
+  text-decoration: none;
+}
+
+/* ==== Buttons in List ==== */
+.check-btn, .delete-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #444;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+.check-btn:hover {
+  background: #2ecc71;
+}
+.delete-btn:hover {
+  background: #e74c3c;
+}
+
+/* ==== Clear All ==== */
+.clear-btn {
+  margin: 1rem auto 0;
+  display: block;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.clear-btn:hover {
+  background: #c0392b;
+}
