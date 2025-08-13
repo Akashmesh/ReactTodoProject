@@ -42,8 +42,10 @@ header h1 {
 form {
   display: flex;
   align-items: center;
-  gap: 0;
-  margin-bottom: 1rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 460px; /* matches list item width */
+  margin: 0 auto 1rem auto;
 }
 .todo-input {
   flex: 1;
@@ -77,6 +79,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center; /* center items horizontally */
 }
 .todo-item {
   display: grid;
@@ -86,9 +89,31 @@ form {
   background: #333;
   padding: 0.6rem 0.8rem;
   border-radius: 6px;
+  width: 100%;
+  max-width: 460px;
+  animation: fadeIn 0.3s ease, slideIn 0.3s ease;
 }
 .todo-item span {
   word-break: break-word;
+}
+
+/* ==== Animations ==== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateY(-8px); }
+  to { transform: translateY(0); }
+}
+.fade-out {
+  animation: fadeOut 0.3s ease forwards, slideOut 0.3s ease forwards;
+}
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+@keyframes slideOut {
+  to { transform: translateY(8px); }
 }
 
 /* ==== Completed ==== */
