@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-export const ToodDate = () => {
+export const TodoDate = () => {
         const [dateTime,setDateTime]= useState('');
  useEffect(()=> {
         const interval =setInterval(()=> {
